@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/heroFragment">
+
+    <fragment
+        android:id="@+id/heroFragment"
+        android:name="com.codinginflow.animeapp.ui.HeroFragment"
+        android:label="fragment_hero"
+        tools:layout="@layout/fragment_hero" >
+        <action
+            android:id="@+id/action_heroFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+        <argument
+            android:name="backFromBottomSheet"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <activity
+        android:id="@+id/firstTimeActivity"
+        android:name="com.codinginflow.animeapp.ui.FirstTimeActivity"
+        android:label="activity_first_time"
+        tools:layout="@layout/activity_first_time" />
+    <activity
+        android:id="@+id/detailsActivity"
+        android:name="com.codinginflow.animeapp.ui.DetailsActivity"
+        android:label="activity_details"
+        tools:layout="@layout/activity_details" >
+        <argument
+            android:name="heroes"
+            app:argType="com.codinginflow.animeapp.Hero" />
+    </activity>
+</navigation>

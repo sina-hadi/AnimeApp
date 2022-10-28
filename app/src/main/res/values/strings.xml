@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">AnimeApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="please_check_it_later_or_connect_developer">Please check it later or connect developer</string>
+    <string name="have_problems_ot_fetch_data">Problems of fetch data</string>
+    <string name="please_wait">Please wait …</string>
+    <string name="data_is_loading">Data is loading</string>
+    <string name="search">Search</string>
+
+    <string name="dummy_text">nserting "Budapest" using add() places the string at the end of the list. This is a
+constant-time operation, meaning the time it takes to perform this operation stays
+the same no matter how large the list becomes.
+However, there may come a time that you need to insert an element in a particular
+location, such as in the middle of the list. To help illustrate, consider the following
+analogy. You’re standing in line for the movies. Someone new comes along to join
+the lineup. If they just go to the end of the line, nobody will even notice the
+newcomer. But, if the newcomer tried to insert himself into the middle of the line, he
+would have to convince half the lineup to shuffle back to make room. And if he were
+terribly rude, he may try to insert himself at the head of the line. This is the worst-
+case scenario because every single person in the lineup would need to shuffle back to
+make room for this new person in front!
+This is exactly how lists work. Inserting new elements from anywhere aside from the
+end will force elements to shift back to make room for the new element:As you’ve seen throughout the chapter, there’s a distinction between mutable and
+immutable data structures in Kotlin.
+When referring to the concept of a List, it’s usually referring to the Kotlin’s
+MutableList. Unlike List, MutableList also has functions for adding and removing
+elements. Kotlin doesn’t allow a List to be changed in any way.
+To change a data structure, you must express this intent by using the Mutable
+version of that data structure. These data structures have functions for adding and
+removing elements.
+So why would you ever use the immutable version? For safety.
+Whenever you need to pass your data structure as a parameter, and you want to be
+sure that the function doesn’t produce a side effect, you should use an immutable
+collection as the parameterSometimes an input field needs clarification with regard to the value that should be
+entered. For example, a stock-ordering application asking for item quantities may
+need to state the minimum order size. In desktop programs, with large screens and
+the use of a mouse, extra messages can be displayed in the form of tool tips (a pop-up
+label over a field when the mouse moves over it). Alternatively, long descriptive labels
+may be used. With Android devices, the screen may be small and no mouse is gener‐
+ally used. The alternative here is to use the android:hint attribute on a View. This causes
+a “watermark” containing the hint text to be displayed in the input field when it is
+empty; this disappears when the user starts typing in the field. The corresponding
+function for android:hint is setHint(int resourceId). Figure 2-5 shows an example hint.</string>
+    <string name="month">Month</string>
+    <string name="power">Power</string>
+    <string name="birthday">Day</string>
+    <string name="family">Family</string>
+    <string name="abilities">Abilities</string>
+    <string name="nature_types">Nature</string>
+
+</resources>
