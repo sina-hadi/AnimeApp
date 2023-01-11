@@ -77,5 +77,4 @@ class MainViewMode @Inject constructor(
         }
     }
 
-
 }

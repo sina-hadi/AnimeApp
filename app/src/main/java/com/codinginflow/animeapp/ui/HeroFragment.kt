@@ -14,12 +14,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.codinginflow.animeapp.R
 import com.codinginflow.animeapp.adapter.HeroAdapter
 import com.codinginflow.animeapp.databinding.FragmentHeroBinding
-import com.codinginflow.animeapp.Hero
-import com.codinginflow.animeapp.model.ResultHero
 import com.codinginflow.animeapp.util.NetworkResult
 import com.codinginflow.animeapp.viewmodel.MainViewMode
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -34,7 +31,6 @@ class HeroFragment : Fragment(), SearchView.OnQueryTextListener {
         super.onCreate(savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity())[MainViewMode::class.java]
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

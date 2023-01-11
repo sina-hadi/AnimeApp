@@ -2,7 +2,6 @@ package com.codinginflow.animeapp.binding
 
 import android.annotation.SuppressLint
 import android.util.Log
-import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -12,6 +11,7 @@ import coil.load
 import com.codinginflow.animeapp.Hero
 import com.codinginflow.animeapp.R
 import com.codinginflow.animeapp.ui.HeroFragmentDirections
+import com.codinginflow.animeapp.util.Constants.Companion.BASE_URL
 import com.google.android.material.imageview.ShapeableImageView
 
 class HeroBinding {
@@ -34,7 +34,7 @@ class HeroBinding {
         @BindingAdapter("android:setImage")
         @JvmStatic
         fun setImage(imageView: ShapeableImageView, imageUrl: String) {
-            imageView.load("http://192.168.1.36:8080$imageUrl"){
+            imageView.load("$BASE_URL$imageUrl"){
                 crossfade(600)
                 error(R.drawable.ic_placeholder)
             }

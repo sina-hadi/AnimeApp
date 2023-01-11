@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             val result = dataStoreRepository.read("key")
-            if (result ==  null) {
+            if (result == null) {
                 val intent = Intent(this@MainActivity, FirstTimeActivity::class.java)
                 startActivity(intent)
             } else {
@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     @Deprecated("Deprecated in Java", ReplaceWith("finish()"))
     override fun onBackPressed() {
         finishAffinity()

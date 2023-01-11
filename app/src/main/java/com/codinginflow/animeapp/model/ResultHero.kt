@@ -1,7 +1,5 @@
 package com.codinginflow.animeapp.model
 
-
-
 import com.codinginflow.animeapp.Hero
 import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable

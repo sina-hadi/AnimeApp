@@ -15,7 +15,6 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-
 @OptIn(DelicateCoroutinesApi::class)
 class ViewPagerAdapter(
     private var title: List<String>,
@@ -58,7 +57,7 @@ class ViewPagerAdapter(
         return title.size
     }
 
-    private suspend fun saveAndPass(v: View){
+    private suspend fun saveAndPass(v: View) {
         val dataStoreRepository = DataStoreRepository(v.context)
         dataStoreRepository.save("key", true)
         val intent = Intent(v.context, MainActivity::class.java)

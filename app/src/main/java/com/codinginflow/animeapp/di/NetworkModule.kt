@@ -18,10 +18,10 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideHttpClient() : OkHttpClient {
+    fun provideHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
-            .readTimeout(15 , TimeUnit.SECONDS)
-            .connectTimeout(15 , TimeUnit.SECONDS)
+            .readTimeout(15, TimeUnit.SECONDS)
+            .connectTimeout(15, TimeUnit.SECONDS)
             .build()
     }
 
@@ -36,7 +36,7 @@ object NetworkModule {
     fun provideRetrofitInstance(
         okHttpClient: OkHttpClient,
         gsonConverterFactory: GsonConverterFactory
-    ) : Retrofit {
+    ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
@@ -46,7 +46,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit) : AnimeApi {
+    fun provideApiService(retrofit: Retrofit): AnimeApi {
         return retrofit.create(AnimeApi::class.java)
     }
 

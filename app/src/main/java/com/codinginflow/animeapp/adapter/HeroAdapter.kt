@@ -1,7 +1,6 @@
 package com.codinginflow.animeapp.adapter
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -38,7 +37,6 @@ class HeroAdapter : RecyclerView.Adapter<HeroAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val resultHero = heroes[position]
-        Log.e("ABCD", resultHero.toString())
         holder.bind(resultHero)
     }
 

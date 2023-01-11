@@ -9,7 +9,7 @@ class DetailsAdapter3 : RecyclerView.Adapter<DetailsAdapter3.MyViewHolder>() {
 
     var properties: List<String> = emptyList()
 
-    class MyViewHolder (private val binding: PropertiesLayoutBinding) :
+    class MyViewHolder(private val binding: PropertiesLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(property: List<String>) {
@@ -33,7 +33,7 @@ class DetailsAdapter3 : RecyclerView.Adapter<DetailsAdapter3.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val ability = properties[position]
-        val property: List<String> = listOf("${position+1}.", ability)
+        val property: List<String> = listOf("${position + 1}.", ability)
         holder.bind(property)
     }
 
@@ -41,7 +41,7 @@ class DetailsAdapter3 : RecyclerView.Adapter<DetailsAdapter3.MyViewHolder>() {
         return properties.size
     }
 
-    fun setData(data: List<String>){
+    fun setData(data: List<String>) {
         properties = data
     }
 }
